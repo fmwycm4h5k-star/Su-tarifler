@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e991a4">
+<title>Su Tarifler</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff9f7;color:#42373b;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.hidden{display:none!important}.login{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#f7c8d0,#f8eadc)}.login-card{background:#fff;padding:34px;border-radius:30px;max-width:430px;text-align:center;box-shadow:0 20px 60px #8c59621c}.logo{font-size:52px}.login h1{margin:10px 0}.tiny,.muted{font-size:12px;color:#8d7b80}.login .tiny{margin-top:14px}.topbar{height:68px;background:#fff;border-bottom:1px solid #f0e0e3;display:flex;justify-content:space-between;align-items:center;padding:0 22px;position:sticky;top:0;z-index:10}.brand{font-size:21px;font-weight:900}.top-actions{display:flex;gap:8px}.sidebar{position:fixed;top:68px;bottom:0;width:230px;padding:18px 12px;background:#fff;border-right:1px solid #f0e0e3}.sidebar button{width:100%;text-align:left;margin:3px 0;padding:12px;border:0;background:transparent;border-radius:14px}.sidebar button.active{background:#f8dce1;color:#9d5061;font-weight:800}.content{margin-left:230px;padding:25px;max-width:1300px}.hero{background:linear-gradient(135deg,#f8c7d0,#f8e8d8);border-radius:28px;padding:28px;display:flex;justify-content:space-between;overflow:hidden}.hero h1,.page-title h1{margin:5px 0;font-size:30px}.hero-flower{font-size:120px;opacity:.16}.eyebrow{font-size:11px;letter-spacing:1.6px;font-weight:900;color:#9b6873}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}.stat-card,.card{background:#fff;border:1px solid #f0e0e3;border-radius:20px;padding:16px;box-shadow:0 8px 25px #8c59620d}.stat-card span{font-size:12px;color:#8d7b80}.stat-card b{display:block;font-size:27px;margin-top:5px}.columns{display:grid;grid-template-columns:1.5fr 1fr;gap:14px}.card{margin-bottom:14px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.card h2{font-size:17px;margin:0 0 12px}.quick{display:flex;gap:8px;flex-wrap:wrap}.page-title{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:15px}.view{display:none}.view.active{display:block}.filters{display:flex;gap:10px;margin-bottom:14px}.filters>*{flex:1}.recipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.recipe{background:#fff;border:1px solid #f0e0e3;border-radius:18px;padding:15px}.recipe h3{margin:0;font-size:17px}.tag{display:inline-block;background:#f8eff0;border-radius:99px;padding:5px 8px;font-size:10px;margin:7px 4px 5px 0}.safe{color:#5b9870;font-size:12px;font-weight:800}.warning{background:#fff0f2;border:1px solid #efb3bd;border-radius:16px;padding:15px;margin-bottom:14px}.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.food-item,.stock-item,.note-item{border:1px solid #f0e0e3;border-radius:15px;padding:13px}.food-item{cursor:pointer}.stars{color:#d68a9b}.stock-item{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;margin:8px 0}.status-ok{color:#5f9a71}.status-low{color:#b47a35}.status-out{color:#b75b68}.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin-bottom:14px}.day{background:#fff;border:1px solid #f0e0e3;border-radius:18px;padding:12px;min-height:220px}.day h3{margin:0 0 10px;font-size:13px}.day button{width:100%;margin:4px 0;text-align:left}.modal{position:fixed;inset:0;background:#0007;display:grid;place-items:center;padding:15px;z-index:30}.modal-box{background:#fff;border-radius:24px;padding:22px;max-width:520px;width:100%;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:15px;top:12px;border:0;background:#f7edef;font-size:20px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{font-size:11px;font-weight:800}input,select,textarea{width:100%;padding:11px;border:1px solid #f0e0e3;border-radius:12px;margin:5px 0 10px;font:inherit}button{border:1px solid #f0e0e3;background:#fff;border-radius:12px;padding:10px 13px;font-weight:700;color:#42373b}.primary{background:#e991a4;color:#fff;border-color:#e991a4}.danger{color:#b65d6c}.empty{padding:18px;text-align:center;color:#8d7b80}.bottom{display:none}
+@media(max-width:900px){.sidebar{display:none}.content{margin-left:0;padding:15px}.stats{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.recipe-grid,.food-grid{grid-template-columns:1fr 1fr}.week-grid{grid-template-columns:1fr 1fr}.page-title{align-items:flex-start;flex-direction:column}.bottom{display:flex;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #f0e0e3;border-radius:20px;padding:7px;z-index:20;gap:2px;box-shadow:0 10px 30px #0002}.bottom button{border:0;font-size:11px}.bottom button.active{background:#f8dce1}}@media(max-width:520px){.recipe-grid,.food-grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}.hero h1{font-size:24px}}
+
+.site-footer{margin-left:230px;padding:18px 25px 30px;color:#9b858b;font-size:11px;text-align:center}@media(max-width:900px){.site-footer{margin-left:0;padding-bottom:80px}}
+
+.auth-screen{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#f7c8d0,#f8eadc)}
+.auth-card{background:#fff;padding:34px;border-radius:30px;max-width:430px;width:100%;box-shadow:0 20px 60px #8c59621c}
+.auth-card h1{margin:10px 0;font-size:25px;text-align:center}.auth-card>p{text-align:center}
+.auth-card .logo{text-align:center}.auth-submit{width:100%;margin-top:5px}.auth-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0}.auth-links button{border:0;background:transparent;color:#9d5061;font-size:12px}.auth-message{padding:10px;border-radius:12px;margin:10px 0;font-size:12px}.auth-message.error{background:#fff0f2;color:#a54f60}.auth-message.success{background:#edf8f0;color:#4d8660}
+
+</style>
+</head>
+<body>
+<div id="authScreen" class="auth-screen">
+  <div class="auth-card">
+    <div class="logo">🌸</div>
+    <h1>Su Tarifler</h1>
+    <p class="muted">Kişisel menülerini, alerjilerini ve mutfak stoğunu güvenli hesabında sakla.</p>
+
+    <div id="authMessage" class="auth-message hidden"></div>
+
+    <form id="loginForm">
+      <label>E-posta</label>
+      <input id="loginEmail" type="email" autocomplete="email" required placeholder="ornek@mail.com">
+      <label>Şifre</label>
+      <input id="loginPassword" type="password" autocomplete="current-password" required minlength="6" placeholder="••••••••">
+      <button class="primary auth-submit" type="submit">Giriş yap</button>
+    </form>
+
+    <form id="signupForm" class="hidden">
+      <label>Ad Soyad</label>
+      <input id="signupName" autocomplete="name" required placeholder="Adınız">
+      <label>E-posta</label>
+      <input id="signupEmail" type="email" autocomplete="email" required placeholder="ornek@mail.com">
+      <label>Şifre</label>
+      <input id="signupPassword" type="password" autocomplete="new-password" required minlength="6" placeholder="En az 6 karakter">
+      <label>Şifre tekrar</label>
+      <input id="signupPassword2" type="password" autocomplete="new-password" required minlength="6" placeholder="Şifrenizi tekrar yazın">
+      <button class="primary auth-submit" type="submit">Hesap oluştur</button>
+    </form>
+
+    <div class="auth-links">
+      <button id="showSignup" type="button">Yeni hesap oluştur</button>
+      <button id="showLogin" class="hidden" type="button">Zaten hesabım var</button>
+      <button id="forgotPassword" type="button">Şifremi unuttum</button>
+    </div>
+    <div class="tiny">Hesabın yoksa önce kayıt ol. E-posta doğrulaması açıksa gelen kutunu kontrol et.</div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+<header class="topbar">
+  <div><div class="brand">🌸 Su</div><div class="tiny">Ek Gıda Asistanı</div></div>
+  <div class="top-actions"><button id="notifyBtn">🔔</button><button id="logoutBtn">Çıkış</button></div>
+</header>
+
+<aside class="sidebar">
+  <button data-view="home" class="active">🏠 Ana Sayfa</button>
+  <button data-view="menu">📅 Haftalık Menü</button>
+  <button data-view="recipes">🍽️ Tarifler</button>
+  <button data-view="foods">🥑 Gıdalar A-Z</button>
+  <button data-view="allergy">⚠️ Alerji</button>
+  <button data-view="stock">🛒 Mutfak Stoğu</button>
+  <button data-view="yogurt">🥛 Süt & Yoğurt</button>
+  <button data-view="notes">📝 Günlük Notlar</button>
+  <button data-view="growth">📏 Boy & Kilo</button>
+  <button data-view="settings">⚙️ Ayarlar</button>
+</aside>
+
+<main class="content">
+<section id="home" class="view active">
+  <div class="hero"><div><span class="eyebrow">BUGÜN</span><h1>Su için ne hazırlayalım?</h1><p>Alerjiler, sevme puanları ve evdeki stok dikkate alınarak öneriler.</p></div><div class="hero-flower">✿</div></div>
+  <div class="stats">
+    <div class="stat-card"><span>Bugünkü öğün</span><b id="statMeals">0</b></div>
+    <div class="stat-card"><span>Denenen gıda</span><b id="statFoods">0</b></div>
+    <div class="stat-card"><span>Kaçınılan ürün</span><b id="statAllergy">0</b></div>
+    <div class="stat-card"><span>Eksik stok</span><b id="statMissing">0</b></div>
+  </div>
+  <div class="columns">
+    <div class="card"><div class="card-head"><h2>💗 Bugünün önerileri</h2><button onclick="go('recipes')">Tüm tarifler</button></div><div id="recommendations"></div></div>
+    <div class="card"><div class="card-head"><h2>🔔 Stok uyarıları</h2><button onclick="go('stock')">Stok</button></div><div id="stockAlerts"></div></div>
+  </div>
+  <div class="card"><div class="card-head"><h2>📌 Hızlı işlemler</h2></div><div class="quick"><button onclick="addMeal()">＋ Öğün</button><button onclick="go('foods')">🥑 Yeni gıda</button><button onclick="go('menu')">📅 Menü oluştur</button><button onclick="go('stock')">🛒 Ürün ekle</button></div></div>
+</section>
+
+<section id="menu" class="view">
+  <div class="page-title"><div><span class="eyebrow">PLANLAMA</span><h1>Haftalık Menü</h1><p>Sabah ve akşam dahil 7 günlük menünü seç.</p></div><button class="primary" onclick="autoMenu()">✨ Akıllı menü oluştur</button></div>
+  <div class="card"><div class="two"><div><label>Menü hedefi</label><select id="menuGoal"><option value="normal">Dengeli</option><option value="weight">Kilo desteği</option></select></div><div><label>Hafta başlangıcı</label><input id="weekStart" type="date"></div></div></div>
+  <div id="weekGrid" class="week-grid"></div>
+  <div class="card"><div class="card-head"><h2>🛒 Bu menünün alışveriş özeti</h2><button onclick="go('stock')">Stoğu yönet</button></div><div id="menuShopping"></div></div>
+</section>
+
+<section id="recipes" class="view">
+  <div class="page-title"><div><span class="eyebrow">A'DAN Z'YE MUTFAK</span><h1>Tarifler</h1><p>Çorbalar, tatlılar, sebzeler, meyveler, tahıllar ve daha fazlası.</p></div></div>
+  <div class="filters"><input id="recipeSearch" placeholder="Tarif ara..."><select id="recipeCat"><option value="">Tüm kategoriler</option><option>Çorba</option><option>Tatlı</option><option>Sebze</option><option>Meyve</option><option>Kahvaltı</option><option>Tahıl</option><option>Kilo desteği</option></select></div>
+  <div id="recipeGrid" class="recipe-grid"></div>
+</section>
+
+<section id="foods" class="view">
+  <div class="page-title"><div><span class="eyebrow">A'DAN Z'YE</span><h1>Gıda Arşivi</h1><p>İlk deneme, alerji, sevme puanı ve uygun tarifler.</p></div><button class="primary" onclick="openFoodModal()">＋ Gıda ekle</button></div>
+  <div class="card"><input id="foodSearch" placeholder="Gıda ara..."><div id="foodGrid" class="food-grid"></div></div>
+</section>
+
+<section id="allergy" class="view">
+  <div class="page-title"><div><span class="eyebrow">GÜVENLİ MENÜ</span><h1>Alerji & Reaksiyon Merkezi</h1><p>Alerjen olarak işaretlenen ürünler önerilen menülerden çıkarılır.</p></div></div>
+  <div class="warning"><b>⚠️ Önemli:</b> Bu bölüm tıbbi tanı koymaz. Şiddetli veya hızla ilerleyen belirtilerde acil tıbbi yardım gerekir.</div>
+  <div class="card"><h2>Kaçınılan ürünler</h2><div id="allergyList"></div></div>
+</section>
+
+<section id="stock" class="view">
+  <div class="page-title"><div><span class="eyebrow">MUTFAK</span><h1>Stok & Alışveriş</h1><p>Evde ne var, kaç gün yeter ve ne zaman almalısın?</p></div><button class="primary" onclick="openStockModal()">＋ Ürün ekle</button></div>
+  <div class="stats"><div class="stat-card"><span>Yeterli</span><b id="stockOk">0</b></div><div class="stat-card"><span>Azalıyor</span><b id="stockLow">0</b></div><div class="stat-card"><span>Eksik</span><b id="stockOut">0</b></div></div>
+  <div class="card"><h2>Evdeki ürünler</h2><div id="stockGrid"></div></div>
+  <div class="card"><h2>🛍️ Alışveriş listesi</h2><div id="shoppingList"></div></div>
+</section>
+
+<section id="yogurt" class="view">
+  <div class="page-title"><div><span class="eyebrow">EV YAPIMI</span><h1>Süt & Yoğurt</h1><p>Mayalama ve ev yapımı temel rehberler.</p></div></div>
+  <div class="recipe-grid" id="dairyGrid"></div>
+</section>
+
+<section id="notes" class="view">
+  <div class="page-title"><div><span class="eyebrow">GÜNLÜK</span><h1>Notlar & İlk Gıdalar</h1><p>İlk denemeleri ve günlük gözlemleri kaydet.</p></div><button class="primary" onclick="addNote()">＋ Not ekle</button></div>
+  <div class="card"><div id="notesList"></div></div>
+</section>
+
+<section id="growth" class="view">
+  <div class="page-title"><div><span class="eyebrow">TAKİP</span><h1>Boy & Kilo</h1><p>Ölçümleri tarihleriyle sakla.</p></div><button class="primary" onclick="addGrowth()">＋ Ölçüm</button></div>
+  <div class="card"><div id="growthList"></div></div>
+</section>
+
+<section id="settings" class="view">
+  <div class="page-title"><div><span class="eyebrow">KİŞİSELLEŞTİR</span><h1>Ayarlar</h1></div></div>
+  <div class="card"><h2>Su'nun profili</h2><div class="two"><div><label>İsim</label><input id="profileName"></div><div><label>Doğum tarihi</label><input id="profileDob" type="date"></div></div><button class="primary" onclick="saveProfile()">Kaydet</button></div>
+  <div class="card"><h2>🔐 Güvenlik</h2><p class="muted">Bu demo sürümünde veriler tarayıcıda tutulur. Gerçek kullanıcı hesabı ve veritabanı için Supabase + RLS kurulumu proje içindeki README'de anlatılmıştır.</p></div>
+</section>
+</main><footer class="site-footer">© 2026 Büşra / Su Tarifler • Tüm hakları saklıdır.</footer>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* Su Tarifler - Supabase configuration
+   1) Create a Supabase project.
+   2) Copy Project URL and Publishable key from Project Settings > API.
+   3) Put them in supabase-config.js.
+   IMPORTANT: never put a service_role/secret key in browser code.
+*/
+window.MIRA_SUPABASE_CONFIG = {
+  url: "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE",
+  publishableKey: "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE"
+};
+
+</script>
+<script>
+/* Real Supabase Auth for Su Tarifler */
+(function () {
+  const cfg = window.MIRA_SUPABASE_CONFIG || {};
+  const msg = document.getElementById("authMessage");
+  const authScreen = document.getElementById("authScreen");
+  const app = document.getElementById("app");
+  let supabaseClient = null;
+
+  function showMessage(text, type="") {
+    if (!msg) return;
+    msg.textContent = text;
+    msg.className = "auth-message " + type;
+    msg.classList.remove("hidden");
+  }
+
+  function configReady() {
+    return cfg.url && cfg.publishableKey &&
+      !cfg.url.includes("PASTE_YOUR") &&
+      !cfg.publishableKey.includes("PASTE_YOUR");
+  }
+
+  function showApp() {
+    authScreen.classList.add("hidden");
+    app.classList.remove("hidden");
+    if (typeof window.render === "function") window.render();
+  }
+
+  function showAuth() {
+    app.classList.add("hidden");
+    authScreen.classList.remove("hidden");
+  }
+
+  async function start() {
+    if (!configReady()) {
+      showMessage("Supabase bağlantısı henüz ayarlanmadı. supabase-config.js dosyasına Project URL ve Publishable Key ekle.", "error");
+      return;
+    }
+    supabaseClient = window.supabase.createClient(cfg.url, cfg.publishableKey);
+    window.miraSupabase = supabaseClient;
+
+    const { data: { session } } = await supabaseClient.auth.getSession();
+    if (session) showApp(); else showAuth();
+
+    supabaseClient.auth.onAuthStateChange((_event, session) => {
+      if (session) showApp(); else showAuth();
+    });
+  }
+
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!supabaseClient) return showMessage("Önce Supabase bağlantısını ayarla.", "error");
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value;
+    const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+    if (error) showMessage(error.message, "error");
+  });
+
+  document.getElementById("signupForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!supabaseClient) return showMessage("Önce Supabase bağlantısını ayarla.", "error");
+    const name = document.getElementById("signupName").value.trim();
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value;
+    const password2 = document.getElementById("signupPassword2").value;
+    if (password !== password2) return showMessage("Şifreler eşleşmiyor.", "error");
+
+    const { data, error } = await supabaseClient.auth.signUp({
+      email,
+      password,
+      options: { data: { full_name: name } }
+    });
+    if (error) return showMessage(error.message, "error");
+
+    if (data.session) {
+      showMessage("Hesabın oluşturuldu.", "success");
+    } else {
+      showMessage("Kayıt tamamlandı. E-posta doğrulaması açıksa gelen kutunu kontrol et.", "success");
+    }
+  });
+
+  document.getElementById("forgotPassword").addEventListener("click", async () => {
+    if (!supabaseClient) return showMessage("Önce Supabase bağlantısını ayarla.", "error");
+    const email = prompt("Şifre sıfırlama bağlantısının gönderileceği e-posta:");
+    if (!email) return;
+    const redirect = window.location.origin + window.location.pathname;
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email.trim(), { redirectTo: redirect });
+    if (error) showMessage(error.message, "error");
+    else showMessage("Şifre sıfırlama bağlantısı e-posta adresine gönderildi.", "success");
+  });
+
+  document.getElementById("showSignup").onclick = () => {
+    document.getElementById("loginForm").classList.add("hidden");
+    document.getElementById("signupForm").classList.remove("hidden");
+    document.getElementById("showSignup").classList.add("hidden");
+    document.getElementById("showLogin").classList.remove("hidden");
+    showMessage("");
+  };
+  document.getElementById("showLogin").onclick = () => {
+    document.getElementById("signupForm").classList.add("hidden");
+    document.getElementById("loginForm").classList.remove("hidden");
+    document.getElementById("showLogin").classList.add("hidden");
+    document.getElementById("showSignup").classList.remove("hidden");
+    showMessage("");
+  };
+
+  window.miraLogout = async function () {
+    if (supabaseClient) await supabaseClient.auth.signOut();
+  };
+
+  start();
+})();
+
+</script>
+<script>
+const KEY="mira_app_v1";
+const defaultData={profile:{name:"Su",dob:"2026-02-03"},foods:[],stock:[],meals:[],menu:{},notes:[],growth:[],fav:[]};
+let data=JSON.parse(localStorage.getItem(KEY)||JSON.stringify(defaultData));
+const recipes=[
+["Avokado & Muz","Kahvaltı",["avokado","muz"],"Ezerek yumuşak kıvamda birleştir.","💗"],
+["Havuç & Bal Kabağı Çorbası","Çorba",["havuç","bal kabağı"],"Sebzeleri iyice pişirip uygun kıvama getir.","🥕"],
+["Kabaklı Yulaf","Tahıl",["kabak","yulaf"],"İyice pişmiş kabağı yulafla kıvamlandır.","🥒"],
+["Muzlu Yoğurt","Tatlı",["muz","yoğurt"],"Muzu ezip yoğurtla karıştır.","🍌"],
+["Armutlu Yulaf","Meyve",["armut","yulaf"],"Yumuşatılmış armutu yulafla birleştir.","🍐"],
+["Brokoli & Patates","Sebze",["brokoli","patates"],"Sebzeleri tamamen yumuşayana kadar pişir.","🥦"],
+["Avokadolu Yoğurt","Kahvaltı",["avokado","yoğurt"],"Avokadoyu ezip yoğurtla karıştır.","🥑"],
+["Kilo Desteği Sebze Menüsü","Kilo desteği",["patates","kabak","yoğurt"],"Enerji yoğunluğu için porsiyon ve uygunluğu çocuk doktorunun önerileriyle değerlendir.","🌸"]
+];
+const dairy=[["Yoğurt mayalama","🥛","Sütün güvenli şekilde hazırlanması, uygun sıcaklığa gelmesi ve maya ile mayalanması için genel rehber."],["Ev yapımı lor","🧀","Süt ürünlerinin hazırlanması için temel yöntem notları."],["Peynir altı suyu","🥣","Ev yapımı peynir/lor işleminden kalan sıvının kullanım notları."]];
+function persist(){localStorage.setItem(KEY,JSON.stringify(data));render()}
+function esc(x){return String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function go(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll(".sidebar button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".sidebar button").forEach(b=>b.onclick=()=>go(b.dataset.view));
+function today(){return new Date().toISOString().slice(0,10)}
+document.getElementById("logoutBtn").onclick=()=>{ if(window.miraLogout) window.miraLogout(); };
+document.getElementById("notifyBtn").onclick=()=>alert("Stok ve menü uyarıları ana sayfada görünür.");
+document.getElementById("recipeSearch").oninput=renderRecipes;document.getElementById("recipeCat").onchange=renderRecipes;document.getElementById("foodSearch").oninput=renderFoods;
+function allergies(){return new Set(data.foods.filter(f=>f.allergic||f.status==="Reaksiyon oldu").map(f=>f.name.toLowerCase().trim()))}
+function safeRecipes(){let bad=allergies();return recipes.filter(r=>r[2].every(i=>!bad.has(i)))}
+function render(){
+ statMeals.textContent=data.meals.filter(x=>x.date===today()).length;
+ statFoods.textContent=data.foods.length;statAllergy.textContent=allergies().size;
+ renderHome();renderRecipes();renderFoods();renderAllergy();renderStock();renderMenu();renderDairy();renderNotes();renderGrowth();
+ profileName.value=data.profile.name;profileDob.value=data.profile.dob;
+}
+function renderHome(){
+ let liked=data.foods.filter(f=>!f.allergic&&f.like>=4).map(f=>f.name.toLowerCase());
+ let rs=safeRecipes().sort((a,b)=>b[2].filter(i=>liked.includes(i)).length-a[2].filter(i=>liked.includes(i)).length).slice(0,4);
+ recommendations.innerHTML=rs.map(r=>`<div class="recipe"><h3>${r[4]} ${esc(r[0])}</h3><span class="tag">${esc(r[1])}</span><div class="muted">${esc(r[3])}</div></div>`).join("")||'<div class="empty">Alerji filtrelerine uygun tarif bulunamadı.</div>';
+ let miss=stockAnalysis().filter(x=>x.need>x.qty||x.days<3);statMissing.textContent=miss.filter(x=>x.need>x.qty).length;
+ stockAlerts.innerHTML=miss.map(x=>`<div class="stock-item"><span>🔔 <b>${esc(x.name)}</b><br><small>${x.qty} ${x.unit} kaldı • yaklaşık ${x.days} gün</small></span><b class="${x.need>x.qty?'status-out':'status-low'}">${x.need>x.qty?"Almalısın":"Azalıyor"}</b></div>`).join("")||'<div class="empty">Şimdilik stok uyarısı yok 🌸</div>';
+}
+function renderRecipes(){
+ let q=(recipeSearch.value||"").toLowerCase(),c=recipeCat.value,bad=allergies(),liked=data.foods.filter(f=>f.like>=4&&!f.allergic).map(f=>f.name.toLowerCase());
+ let list=safeRecipes().filter(r=>(!q||r[0].toLowerCase().includes(q)||r[2].join(" ").includes(q))&&(!c||r[1]===c)).sort((a,b)=>b[2].filter(x=>liked.includes(x)).length-a[2].filter(x=>liked.includes(x)).length);
+ recipeGrid.innerHTML=list.map(r=>{let fav=data.fav.includes(r[0]),good=r[2].some(x=>liked.includes(x));return `<div class="recipe"><div class="card-head"><h3>${r[4]} ${esc(r[0])}</h3><button onclick='toggleFav(${JSON.stringify(r[0])})'>${fav?"♥":"♡"}</button></div><span class="tag">${esc(r[1])}</span>${r[2].map(x=>`<span class="tag">${esc(x)} ${liked.includes(x)?"💗":""}</span>`).join("")}<p class="muted">${esc(r[3])}</p>${good?'<div class="safe">★ Sevdiği gıdalara uygun</div>':""}</div>`}).join("")||'<div class="empty">Uygun tarif bulunamadı.</div>';
+}
+function renderFoods(){
+ let q=(foodSearch.value||"").toLowerCase();
+ let list=[...data.foods].sort((a,b)=>a.name.localeCompare(b.name,"tr")).filter(f=>f.name.toLowerCase().includes(q));
+ foodGrid.innerHTML=list.map(f=>`<div class="food-item" onclick='editFood(${JSON.stringify(f.name)})'><b>${esc(f.name)}</b><div class="stars">${f.like?"★".repeat(f.like)+"☆".repeat(5-f.like):"Henüz puanlanmadı"}</div><small>${f.allergic||f.status==="Reaksiyon oldu"?"⚠️ ALERJİ/REAKSİYON":"🟢 Güvenli kayıt"} • ${esc(f.date)}</small><p class="muted">${esc(f.note||"Not yok")}</p></div>`).join("")||'<div class="empty">Henüz gıda kaydı yok.</div>';
+}
+function renderAllergy(){let a=data.foods.filter(f=>f.allergic||f.status==="Reaksiyon oldu");allergyList.innerHTML=a.map(f=>`<div class="stock-item"><span><b>⚠️ ${esc(f.name)}</b><br><small>${esc(f.date)} • ${esc(f.note||"Belirti notu yok")}</small></span><button onclick='removeAllergy(${JSON.stringify(f.name)})'>Etiketi kaldır</button></div>`).join("")||'<div class="empty">Kaçınılan ürün yok.</div>'}
+function stockAnalysis(){
+ let menuItems=Object.values(data.menu).flatMap(x=>x||[]),counts={};menuItems.forEach(name=>{let r=recipes.find(x=>x[0]===name);if(r)r[2].forEach(i=>counts[i]=(counts[i]||0)+1)});
+ return data.stock.map(s=>{let need=counts[s.name.toLowerCase()]||0,days=s.daily?Math.floor(s.qty/s.daily):99;return {...s,need,days}})
+}
+function renderStock(){
+ let a=stockAnalysis();stockOk.textContent=a.filter(x=>x.qty>=x.need&&x.days>=3).length;stockLow.textContent=a.filter(x=>x.days<3&&x.qty>=x.need).length;stockOut.textContent=a.filter(x=>x.qty<x.need).length;
+ stockGrid.innerHTML=a.map((x,i)=>`<div class="stock-item"><span><b>${esc(x.name)}</b><br><small>${x.qty} ${esc(x.unit)} • günlük ${x.daily||0} ${esc(x.unit)} • ${x.days>=90?"yeterli":x.days+" gün yeter"}</small></span><span class="${x.qty<x.need?'status-out':x.days<3?'status-low':'status-ok'}">${x.qty<x.need?"Eksik":x.days<3?"Azalıyor":"Yeterli"}<br><button onclick="addStock(${i})">+ stok</button></span></div>`).join("")||'<div class="empty">Stok ekle.</div>';
+ shoppingList.innerHTML=a.filter(x=>x.qty<x.need).map(x=>`<div class="stock-item"><span>🛒 <b>${esc(x.name)}</b><br><small>Menü için ${x.need} ${esc(x.unit)} gerekiyor, evde ${x.qty} var.</small></span><b>+ ${x.need-x.qty} ${esc(x.unit)}</b></div>`).join("")||'<div class="empty">Haftalık menüye göre eksik ürün yok.</div>';
+}
+function renderMenu(){
+ let start=weekStart.value||today(),days=[];for(let i=0;i<7;i++){let d=new Date(start);d.setDate(d.getDate()+i);days.push(d.toISOString().slice(0,10))}
+ weekGrid.innerHTML=days.map((date,i)=>{let m=data.menu[date]||["",""];return `<div class="day"><h3>${new Date(date).toLocaleDateString("tr-TR",{weekday:"long",day:"2-digit",month:"2-digit"})}</h3><button onclick='pickMeal(${JSON.stringify(date)},"morning")'>🌅 ${esc(m[0]||"Sabah seç")}</button><button onclick='pickMeal(${JSON.stringify(date)},"evening")'>🌙 ${esc(m[1]||"Akşam seç")}</button></div>`}).join("");
+ let a=stockAnalysis();menuShopping.innerHTML=a.filter(x=>x.qty<x.need).map(x=>`<div class="stock-item"><span>${esc(x.name)}</span><b>${x.need-x.qty} ${esc(x.unit)}</b></div>`).join("")||'<div class="empty">Eksik ürün yok.</div>';
+}
+function autoMenu(){let safe=safeRecipes(),goal=menuGoal.value==="weight"?safe.filter(r=>r[1]==="Kilo desteği"||r[1]==="Kahvaltı"||r[1]==="Çorba"):safe;let start=weekStart.value||today();for(let i=0;i<7;i++){let dt=new Date(start);dt.setDate(dt.getDate()+i);let k=dt.toISOString().slice(0,10);data.menu[k]=[goal[(i*2)%goal.length]?.[0]||"",goal[(i*2+1)%goal.length]?.[0]||""]}persist()}
+function pickMeal(date,slot){let list=safeRecipes();let opts=list.map(r=>r[0]).join("\n");let chosen=prompt("Tarif adını yaz:\n"+opts);if(!chosen)return;let r=list.find(x=>x[0].toLowerCase()===chosen.toLowerCase());if(!r)return alert("Bu tarif uygun listede yok.");data.menu[date]=data.menu[date]||["",""];data.menu[date][slot==="morning"?0:1]=r[0];persist()}
+function addMeal(){let x=prompt("Öğün/yenenler:");if(x){data.meals.push({date:today(),text:x});persist()}}
+function openFoodModal(){modal.classList.remove("hidden");modalBody.innerHTML=`<h2>🥑 Gıda ekle</h2><label>Gıda</label><input id="mFoodName"><div class="two"><div><label>Tarih</label><input id="mFoodDate" type="date" value="${today()}"></div><div><label>Durum</label><select id="mFoodStatus"><option>Sorunsuz</option><option>Gözlemle</option><option>Reaksiyon oldu</option></select></div></div><label>Sevme puanı</label><select id="mFoodLike"><option value="0">Henüz denemedik</option><option value="1">★</option><option value="2">★★</option><option value="3">★★★</option><option value="4">★★★★</option><option value="5">★★★★★</option></select><label>Not / belirti</label><textarea id="mFoodNote"></textarea><button class="primary" onclick="saveFood()">Kaydet</button>`}
+function saveFood(){let name=mFoodName.value.trim();if(!name)return;let reaction=mFoodStatus.value==="Reaksiyon oldu";if(reaction&&!confirm("⚠️ Reaksiyon olarak etiketlenecek ve tariflerden çıkarılacak. Kaydet?"))return;data.foods.push({name,date:mFoodDate.value||today(),status:mFoodStatus.value,like:+mFoodLike.value,note:mFoodNote.value.trim(),allergic:reaction});closeModal();persist()}
+function editFood(name){let f=data.foods.find(x=>x.name===name);alert(`${f.name}\nSevme: ${f.like?f.like+"/5":"puanlanmadı"}\nDurum: ${f.status}\nNot: ${f.note||"—"}`)}
+function removeAllergy(name){let f=data.foods.find(x=>x.name===name);if(f){f.allergic=false;if(f.status==="Reaksiyon oldu")f.status="Gözlemle";persist()}}
+function openStockModal(){modal.classList.remove("hidden");modalBody.innerHTML=`<h2>🛒 Stok ekle</h2><label>Ürün</label><input id="sName" placeholder="muz"><div class="two"><div><label>Miktar</label><input id="sQty" type="number" step=".1"></div><div><label>Birim</label><select id="sUnit"><option>adet</option><option>g</option><option>kg</option><option>ml</option><option>litre</option></select></div></div><label>Günlük ortalama kullanım</label><input id="sDaily" type="number" step=".1"><button class="primary" onclick="saveStock()">Kaydet</button>`}
+function saveStock(){let name=sName.value.trim().toLowerCase();if(!name)return;data.stock.push({name,qty:+sQty.value||0,unit:sUnit.value,daily:+sDaily.value||0});closeModal();persist()}
+function addStock(i){let x=data.stock[i],n=prompt(`${x.name} için eklenecek miktar:`);if(n){x.qty+=(+n||0);persist()}}
+function addNote(){let x=prompt("Not / ilk gıda gözlemi:");if(x){data.notes.push({date:today(),text:x});persist()}}
+function addGrowth(){let w=prompt("Kilo (kg):"),h=prompt("Boy (cm):");if(w||h){data.growth.push({date:today(),w:+w||null,h:+h||null});persist()}}
+function renderDairy(){dairyGrid.innerHTML=dairy.map(x=>`<div class="recipe"><h3>${x[1]} ${x[0]}</h3><p class="muted">${x[2]}</p></div>`).join("")}
+function renderNotes(){notesList.innerHTML=data.notes.slice().reverse().map(x=>`<div class="note-item"><b>${esc(x.date)}</b><p>${esc(x.text)}</p></div>`).join("")||'<div class="empty">Henüz not yok.</div>'}
+function renderGrowth(){growthList.innerHTML=data.growth.slice().reverse().map(x=>`<div class="stock-item"><span>📅 ${esc(x.date)}</span><b>${x.w?x.w+" kg":""} ${x.h?x.h+" cm":""}</b></div>`).join("")||'<div class="empty">Henüz ölçüm yok.</div>'}
+function toggleFav(name){data.fav.includes(name)?data.fav=data.fav.filter(x=>x!==name):data.fav.push(name);persist()}
+function closeModal(){modal.classList.add("hidden")}
+function saveProfile(){data.profile.name=profileName.value;data.profile.dob=profileDob.value;persist();alert("Profil kaydedildi.")}
+weekStart.value=today();
+window.addEventListener("beforeunload",()=>localStorage.setItem(KEY,JSON.stringify(data)));
+
+</script>
+</body>
+</html>
